@@ -1,8 +1,0 @@
-{
-    "explorer.confirmDragAndDrop": false,
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "explorer.confirmDelete": false,
-    "workbench.iconTheme": "catppuccin-mocha",
-    "window.titleBarStyle": "custom",
-    "window.menuBarVisibility": "toggle"
-}
