@@ -1,0 +1,94 @@
+
+@import "./themes/mocha.css";
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    /*font-family: "JetBrainsMono Nerd Font";*/
+    font-weight: bold;
+    font-size: 15px;
+    color: @text;
+}
+
+window#waybar {
+    background-color: shade(@base, 0.9);
+    border: 2px solid alpha(@crust, 0.3);
+}
+
+.modules-right {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.modules-left {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: @surface0;
+}
+
+
+#tray {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-right: 10px;
+    background: @surface0;
+}
+
+#network {
+    color: @sky;
+    border-radius: 0 10px 10px 0;
+    padding-right: 13px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: @surface0;
+}
+
+#clock {
+    padding-left: 13px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 10px 0 0 10px;
+    color: @lavender;
+    background: @surface0;
+}
+
+#pulseaudio {
+    color: @maroon;
+}
+
+#battery,
+#bluetooth,
+#pulseaudio,
+#disk,
+#memory,
+#cpu,
+#temperature,
+#jack
+ {
+    background: @surface0;
+    padding: 4px 10px 4px 10px;
+    margin: 0;
+}
+
+
+#temperature.critical,
+#pulseaudio.muted {
+    color: @red;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}

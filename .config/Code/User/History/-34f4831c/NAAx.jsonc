@@ -1,0 +1,218 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "disk",
+        "memory",
+        "cpu",
+        "temperature"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "clock",
+        "bluetooth",
+        "group/audio",
+        "group/networking",
+        "battery"
+    ],
+    "reload_style_on_change": true,
+    "hyprland/language": {
+        "format": "Lang: {long}",
+        "format-en": "AMERICA, HELL YEAH!",
+        "format-tr": "As bayrakları",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/"
+    },
+    "memory": {
+        "format": " {percentage}%"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": " {usage}%",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+    },
+    "temperature": {
+        "format": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "interval": 1,
+        "critical-threshold": 80,
+        "on-click": "foot btop",
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "rotate": 0,
+        "on-click": "/usr/local/bin/ags -t ActivityCenter",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "bluetooth": {
+        "format-on": "󰂰",
+        "format-off": "",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂴",
+        "format-connected-battery": "{device_battery_percentage}% 󰂴",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "rofi-bluetooth",
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂰",
+        "format-muted": "",
+        "tooltip-format": "{volume}% {icon}",
+        "format-icons": {
+            "headphones": "",
+            "bluetooth": "󰥰",
+            "handsfree": "",
+            "headset": "󱡬",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "🕨",
+                "🕩",
+                "🕪"
+            ]
+        },
+        "scroll-step": 5,
+        "justify": "center",
+        "on-click": "amixer sset Master toggle",
+        "on-click-right": "pavucontrol",
+        "tooltip-format": "{volume}%  {icon}",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "pulseaudio/slider"
+        ]
+    },
+    "custom/hotspot": {
+        "format": "{icon}",
+        "interval": 1,
+        "tooltip": true,
+        "return-type": "json",
+        "format-icons": {
+            "active": "󱜠",
+            "notactive": "󱜡"
+        },
+        "exec": "waybar-hotspot -a watch",
+        "on-click": "waybar-hotspot -a toggle",
+    },
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󱐅",
+        "tooltip-format": "{ipaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+        "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+        "tooltip-format-ethernet": "{bandwidthTotalBytes}",
+        "on-click": "networkmanager_dmenu"
+    },
+    "network#speed": {
+        "format": "{bandwidthDownBits}",
+        "interval": 1,
+        "tooltip-format": "{ipaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+        "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+        "tooltip-format-disconnected": "Not Connected to any type of Network",
+        "tooltip": true,
+        "on-click": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
+    },
+    "group/networking": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "network",
+            "network#speed"
+        ]
+    },
+    "battery": {
+        "interval": 1,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "tooltip": true,
+        "format": "{capacity}% <span font='16px'>{icon}</span>",
+        "format-time": "{H}h {M}min",
+        "tooltip": "{time}",
+        "format-charging": "{capacity}% <span font='16px'>{icon}</span>",
+        "format-plugged": "{capacity}% 󰠠",
+        // "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰪞",
+            "󰪟",
+            "󰪠",
+            "󰪡",
+            "󰪢",
+            "󰪣",
+            "󰪤",
+            "󰪥"
+        ],
+        "on-click": "~/.config/rofi/scripts/powermenu.sh"
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) <U+F001>",
+        "format-disconnected": "Disconnected <U+F001>",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped <U+F001>",
+        "interval": 2,
+        "consume-icons": {
+            "on": "<U+F0C4> "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"><U+F074></span> ",
+            "on": "<U+F074> "
+        },
+        "repeat-icons": {
+            "on": "<U+F01E> "
+        },
+        "single-icons": {
+            "on": "<U+F01E>1 "
+        },
+        "state-icons": {
+            "paused": "<U+F04C>",
+            "playing": "<U+F04B>"
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    }
+}

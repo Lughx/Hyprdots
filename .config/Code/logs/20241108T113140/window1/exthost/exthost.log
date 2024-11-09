@@ -1,0 +1,16 @@
+2024-11-08 11:31:43.453 [info] Extension host with pid 44213 started
+2024-11-08 11:31:43.453 [info] Skipping acquiring lock for /home/lughx/.config/Code/User/workspaceStorage/87f6b72bf11e272574982c684e646f41.
+2024-11-08 11:31:43.670 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-11-08 11:31:43.751 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-11-08 11:31:43.758 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-11-08 11:31:43.932 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-08 11:31:44.146 [info] Eager extensions activated
+2024-11-08 11:31:44.195 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-08 11:31:44.201 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-08 11:31:44.244 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2024-11-08 11:31:44.255 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc-icons, startup: false, activationEvent: 'onStartupFinished'
+2024-11-08 11:31:44.652 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-08 11:31:44.679 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-08 11:31:44.814 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-08 11:32:51.829 [info] Extension host terminating: renderer closed the MessagePort
+2024-11-08 11:32:51.869 [info] Extension host with pid 44213 exiting with code 0

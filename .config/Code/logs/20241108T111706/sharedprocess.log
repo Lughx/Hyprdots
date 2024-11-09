@@ -1,0 +1,39 @@
+2024-11-08 11:17:47.844 [info] Getting Manifest... catppuccin.catppuccin-vsc
+2024-11-08 11:17:48.087 [info] Installing extension: catppuccin.catppuccin-vsc {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/lughx/.vscode/extensions/extensions.json","path":"/home/lughx/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.95.1","date":"2024-10-31T05:14:54.222Z"}}
+2024-11-08 11:17:48.899 [info] Extension signature verification result for catppuccin.catppuccin-vsc: UnknownError. Executed: true. Duration: 53ms.
+2024-11-08 11:17:48.973 [info] Extracted extension to file:///home/lughx/.vscode/extensions/catppuccin.catppuccin-vsc-3.15.2: catppuccin.catppuccin-vsc
+2024-11-08 11:17:48.980 [info] Renamed to /home/lughx/.vscode/extensions/catppuccin.catppuccin-vsc-3.15.2
+2024-11-08 11:17:49.012 [info] Extension installed successfully: catppuccin.catppuccin-vsc vscode-userdata:/home/lughx/.vscode/extensions/extensions.json
+2024-11-08 11:17:49.084 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/lughx/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/lughx/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-08 11:18:19.344 [info] Getting Manifest... thang-nm.catppuccin-perfect-icons
+2024-11-08 11:18:19.405 [info] Installing extension: thang-nm.catppuccin-perfect-icons {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/lughx/.vscode/extensions/extensions.json","path":"/home/lughx/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.95.1","date":"2024-10-31T05:14:54.222Z"}}
+2024-11-08 11:18:21.041 [info] Extension signature verification result for thang-nm.catppuccin-perfect-icons: UnknownError. Executed: true. Duration: 20ms.
+2024-11-08 11:18:28.401 [info] Extracted extension to file:///home/lughx/.vscode/extensions/thang-nm.catppuccin-perfect-icons-0.21.32: thang-nm.catppuccin-perfect-icons
+2024-11-08 11:18:28.415 [info] Renamed to /home/lughx/.vscode/extensions/thang-nm.catppuccin-perfect-icons-0.21.32
+2024-11-08 11:18:28.437 [info] Extension installed successfully: thang-nm.catppuccin-perfect-icons vscode-userdata:/home/lughx/.vscode/extensions/extensions.json
+2024-11-08 11:18:28.505 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/lughx/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/lughx/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)
+2024-11-08 11:18:50.137 [info] Getting Manifest... catppuccin.catppuccin-vsc-icons
+2024-11-08 11:18:50.192 [info] Installing extension: catppuccin.catppuccin-vsc-icons {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/lughx/.vscode/extensions/extensions.json","path":"/home/lughx/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.95.1","date":"2024-10-31T05:14:54.222Z"}}
+2024-11-08 11:18:51.503 [info] Extension signature verification result for catppuccin.catppuccin-vsc-icons: UnknownError. Executed: true. Duration: 26ms.
+2024-11-08 11:18:55.120 [info] Extracted extension to file:///home/lughx/.vscode/extensions/catppuccin.catppuccin-vsc-icons-1.17.0: catppuccin.catppuccin-vsc-icons
+2024-11-08 11:18:55.132 [info] Renamed to /home/lughx/.vscode/extensions/catppuccin.catppuccin-vsc-icons-1.17.0
+2024-11-08 11:18:55.159 [info] Extension installed successfully: catppuccin.catppuccin-vsc-icons vscode-userdata:/home/lughx/.vscode/extensions/extensions.json
+2024-11-08 11:18:55.224 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/lughx/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/lughx/.vscode/extensions/extensions.json.vsctmp'
+    at hm.create (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39254)
+    at Es (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39361)
+    at Fr.ib (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22677)
+    at Fr.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:16010)
+    at async Zl.stat (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84491)
+    at async Jl.yb (file:///opt/visual-studio-code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66605)

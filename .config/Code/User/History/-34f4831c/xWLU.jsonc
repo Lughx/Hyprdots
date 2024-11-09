@@ -1,0 +1,149 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "cpu",
+        "memory",
+        "temperature"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "tray",
+        "clock",
+        "pulseaudio",
+        "battery",
+        "bluetooth",
+        "network",
+    ],
+    "reload_style_on_change": true,
+    "memory": {
+        "format": " {percentage}%"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "󰍛 {usage}%",
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+    },
+    "temperature": {
+        "format": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "interval": 1,
+        "critical-threshold": 80,
+        "on-click": "foot btop",
+    },
+
+
+    "tray": {
+      "icon-size": 25,
+      "spacing": 5,
+      "show-passive-items": true
+    },
+
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "rotate": 0,
+        "on-click": "/usr/local/bin/ags -t ActivityCenter",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "bluetooth": {
+      "format": "󰂯",
+      "format-disabled": "󰂲",
+      "format-off": "󰂲",
+      "format-connected": "󰂱",
+      "format-connected-battery": "󰂱 {device_battery_percentage}󰏰",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "on-click": "rofi-bluetooth",
+      "on-click-right": "rfkill toggle bluetooth"
+    },
+    "pulseaudio": {
+      "format": "{icon} {volume:2}󰏰",
+      "format-bluetooth": "{icon}  {volume}󰏰",
+      "format-muted": "󰝟",
+      "format-icons": {
+        "headphone": "󰋋",
+        "hands-free": "󰋋",
+        "headset": "󰋋",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["󰖀", "󰕾"]
+      },
+      "scroll-step": 5,
+      "on-click": "pamixer -t",
+      "on-click-right": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": " {ipaddr}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󱐅",
+        "tooltip-format": "{ipaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+        "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+        "tooltip-format-ethernet": "{bandwidthTotalBytes}",
+        "on-click": "networkmanager_dmenu"
+    },
+    "network#speed": {
+        "format": "{bandwidthDownBits}",
+        "interval": 1,
+        "tooltip-format": "{ipaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+        "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+        "tooltip-format-disconnected": "Not Connected to any type of Network",
+        "tooltip": true,
+        "on-click": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
+    },
+    "group/networking": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "network",
+            "network#speed"
+        ]
+    },
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon} {capacity}󰏰",
+      "format-charging": "{icon} {capacity}󰏰",
+      "format-icons": {
+        "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+        "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+      }
+    }
+}
