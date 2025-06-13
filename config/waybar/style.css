@@ -1,0 +1,134 @@
+
+@import "./themes/mocha.css";
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    /*font-family: "JetBrainsMono Nerd Font";*/
+    font-weight: bold;
+    font-size: 15px;
+    color: @text;
+}
+
+window#waybar {
+    background-color: rgba(49, 50, 68, 0.1);
+}
+
+.modules-right {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.modules-left {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background: rgba(49, 50, 68, 0.3);
+}
+
+
+#tray {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-right: 10px;
+    background: rgba(49, 50, 68, 0.3);
+}
+
+#privacy {
+    padding: 2px 13px 2px 13px;
+    border-radius: 15px;
+    margin-right: 10px;
+    background: rgba(49, 50, 68, 0.3);
+}
+
+#network {
+    color: @blue;
+    border-radius: 0 15px 15px 0;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 23px;
+}
+
+#network.speed {
+    color: @green;
+    background: transparent;
+    padding-right: 4px;
+}
+
+#network.speedUp {
+    color: @peach;
+    background: transparent;
+    padding-right: 8px;
+}
+
+#clock {
+    padding-left: 13px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 15px 0 0 15px;
+    color: @lavender;
+}
+
+#pulseaudio {
+    color: @maroon;
+}
+
+#cpu, #memory, #temperature {
+    color: @lavender;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#battery,
+#bluetooth,
+#pulseaudio,
+#disk,
+#memory,
+#cpu,
+#clock,
+#temperature,
+#backlight,
+#jack
+ {
+    padding: 4px 10px 4px 10px;
+    margin: 0;
+}
+
+#battery,
+#bluetooth,
+#network,
+#pulseaudio,
+#clock,
+#backlight,
+#jack
+ {
+    background: rgba(49, 50, 68, 0.3);
+}
+
+
+#temperature.critical,
+#pulseaudio.muted {
+    color: @red;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
+
+#bluetooth.disabled, #network.disconnected, #network.disabled {
+    color: rgba(255, 255, 255, 0.3);
+}
